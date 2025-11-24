@@ -1,0 +1,135 @@
+.lexical-gaps {
+  background: #e8f4fd;
+  border-radius: 12px;
+  padding: 25px;
+  border: 2px solid #b8daff;
+  margin-top: 20px;
+}
+
+.lexical-gaps h3 {
+  color: #004085;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.gaps-intro {
+  color: #004085;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.gaps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gap-item {
+  border: 1px solid #b8daff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gap-header {
+  width: 100%;
+  padding: 15px 20px;
+  background: #d1ecf1;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: inherit;
+}
+
+.gap-header:hover {
+  background: #bee5eb;
+}
+
+.gap-word {
+  font-weight: 700;
+  color: #0c5460;
+  font-size: 1.1em;
+}
+
+.gap-toggle {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #0c5460;
+}
+
+.gap-content {
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #b8daff;
+}
+
+.gap-definition,
+.gap-examples,
+.gap-alternatives {
+  margin-bottom: 15px;
+}
+
+.gap-definition:last-child,
+.gap-examples:last-child,
+.gap-alternatives:last-child {
+  margin-bottom: 0;
+}
+
+.gap-definition strong,
+.gap-examples strong,
+.gap-alternatives strong {
+  color: #004085;
+}
+
+.gap-examples ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 8px;
+}
+
+.gap-examples li {
+  margin-bottom: 5px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.gap-examples li:before {
+  content: "•";
+  color: #007bff;
+  font-weight: bold;
+  position: absolute;
+  left: 8px;
+}
+
+/* High Contrast Mode */
+.high-contrast .lexical-gaps {
+  background: #000;
+  border-color: #ffd700;
+}
+
+.high-contrast .lexical-gaps h3,
+.high-contrast .gaps-intro {
+  color: #ffd700;
+}
+
+.high-contrast .gap-header {
+  background: #1a1a1a;
+  color: #ffd700;
+}
+
+.high-contrast .gap-word {
+  color: #ffd700;
+}
+
+.high-contrast .gap-content {
+  background: #000;
+  color: #fff;
+}
+
+.high-contrast .gap-definition strong,
+.high-contrast .gap-examples strong,
+.high-contrast .gap-alternatives strong {
+  color: #ffd700;
+}

@@ -1,0 +1,88 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.settings-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.input-section,
+.output-section {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e9ecef;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .settings-sidebar {
+    width: 100%;
+    order: 2;
+  }
+  
+  .content-area {
+    order: 1;
+  }
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  background-color: #000;
+  color: #fff;
+}
+
+.high-contrast .input-section,
+.high-contrast .output-section {
+  background: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Font Size Classes */
+.font-small {
+  font-size: 14px;
+}
+
+.font-medium {
+  font-size: 16px;
+}
+
+.font-large {
+  font-size: 18px;
+}
+
+.font-xlarge {
+  font-size: 20px;
+}
+
+/* Keep all your existing styles and just add this */
+.file-upload-section {
+  margin-bottom: 20px;
+}
