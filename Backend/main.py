@@ -102,15 +102,19 @@ import re, requests
 import sentencepiece
 
 # ----------------- Initialize FastAPI -----------------
+origins = [
+    "https://dyslexic-198o.onrender.com",
+    "http://localhost:3000",
+]
+
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # your frontend URL
+    allow_origins=origins,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-    allow_credentials=True,
 )
-
 # ----------------- Request Schema -----------------
 class TextRequest(BaseModel):
     text: str
