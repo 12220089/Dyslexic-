@@ -172,7 +172,7 @@ def simplify_text(data: TextRequest):
     # T5 Simplification
     input_text = "simplify: " + text
     inputs = tokenizer.encode(input_text, return_tensors="pt", max_length=512, truncation=True)
-    outputs = model.generate(inputs, max_new_tokens=128, num_beams=4, early_stopping=True)
+    outputs = model.generate(inputs, max_new_tokens=256, num_beams=4, early_stopping=True)
     simplified = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
     # Lexical Gap Detection on original text
